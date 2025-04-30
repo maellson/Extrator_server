@@ -1,109 +1,79 @@
-x
+PREFEITURA MUNICIPAL DO SALVADOR  [ozzsar ?
 
-Políticas: .
-E Rr rr rep rr e re tree tir tetra rr
+SECRETARIA MUNICIPAL DA FAZENDA Data e Hora de Emissão:
+29/03/2025 08:07:10
 
-Standard - 2 Camas de
-Solteiro
+ode de er icação:
 
-TH rena re A rr rr rr rr a rr tr pp SO ar a st SO ram ri rr eme
+NOTA FISCAL DE SERVIÇOS ELETRÔNICA - Nota Salvador
+RPS Nº 446284 Série 1, emitido em 28/03/2025
 
-Politicas Gerais:
+PRESTADOR DE SERVIÇOS
 
-Políticas Gerais : As diárias iniciam-se às 14h da data de entrada e terminam às 12h da data de saída do hóspede. Para chegadas e saídas fora desses horários, o hotel
-deve ser consultado sobre disponibilidade e tarifas; As reservas ficam confirmadas até às 12h do dia posterior ao dia de entrada, sendo debitado ou faturado uma diária
-no cartão de crédito em caso de não comparecimento. A criança cortesia poderá ser acomodada na mesma cama dos pais ou responsáveis; A terceira pessoa (criança
-acima de 7 anos e adultos) no apartamento será acomodado em cama extra mediante consulta de disponibilidade e cobrança conforme política; É indispensável
-apresentação do documento de identidade dos hóspedes (adultos e menor de idade) no momento do check-in; É vetada a hospedagem de criança ou adolescente em
-hotéis, matéis, pensões, pousadas ou estabelecimentos congêneres, salvo se autorizado ou acompanhado pelos pais ou responsável — Art. 82 do Estatuto da Criança e
-do Adolescente (Lei 8.069, de 13/07/1990); Caso o menor não esteja acompanhado dos pais, é necessário que seja entregue no ato do check in a autorização por escrito
-de ambos os pais, com as firmas devidamente reconhecidas em cartório juntamente com o documento de identidade do menor. - Solicitações de early check in e de late
-check out serão atendidas mediante disponibilidade do hotel e sujeitas à cobrança de acordo com os horários solicitados.
+CPF/CNPJ: Inscrição Municipal: HOTÉIS
+81.071.623/0006-61 00.320.808/001-40
 
-“A ir rr Ir ido re ie e e e e E HH e re mm
+ome/Razão Social D)
+DEVILLE HOTEIS E TURISMO LTDA EVILLE
+Endereço: e PRIME
+Rua Passárgada SN - ITAPUA - Salvador - CEP: 41620-430 - BA
+E-mail:
+(deville.com.br
 
-Observações :
+TOMADOR DE SERVIÇOS
 
-er e e ie O A ie E e pH O
+ome/Razão Social
 
-Notas Internas :
+VOETUR TURISMO E REPRESENTAÇÕES LTDA
 
-10/01/2025 14:01:14;Notas para o quarto:
-Pedidos especiais
-Description
+CPF/CNPJ: Inscrição Municipal:
+01.017.250/0001-05 =
 
-Comentários da reserva
+Endereço:
 
-INSTRUÇÕES:
+St Sen Qdra 5 BIA SI 417 01, Qdra 5 BI A Sl 417 Asa Norte - Brasília - CEP: 70715-900/DF
+E-mail:
 
-ATENÇÃO: O cartão será liberado para débito somente quando houver o carregamento da NF no site https://app.bee2pay.com/ e em seguida o de acordo da Voetur Turismo.
-Orientações Gerais:
+conciliacao(Dvoetur.com.br
 
-1.Emitir uma nota fiscal para cada Hospede (Unidade Habitacional):
+DISCRIMINAÇÃO DOS SERVIÇOS
+Hospede: CARLOS ANTONIO VIEI FERNANDES
+Confirmacao: 133566657
+UH: 0728
+RPS:446284
+Check In:27/03/2025
+Check Qut:28/03/2025
 
-“Informando nome do(s) hospede(s),
+TAXA DE SERVICO: 45,00
+TAXA ISSQN: 22,50
+DIARIAS: 450,00
+Dispensada a retencao de impostos federais conforme determinacao do Art. 4 da Lei 14.148/21.
+Taxa de Servico
 
-“Descrição das despesas,
+Taxa ISSQN
 
-“Período de hospedagem (Check in/Check Out);
+Diarias
 
-2.Em caso de NOSHOW, especificar na nota fiscal.
+VALOR TOTAL DA NOTA = R$517,50
 
-3.Para os apartamentos duplos, deverá estar discriminado na nota fiscal o nome de cada hospede, com seus respectivos valores de hospedagem, inclusive o NOSHOW do
-hóspede que dividiria o quarto;
+CNAE
+5510801 - Hotéis
 
-4.Nos extratos de hospedagem deverão constar: Nome de Hóspede, Descrição das despesas, Período de Hospedagem (IN/OUT) e Assinatura;
+Item da Lista de Serviços
+00901 - Hospedagem de qualquer natureza em hotéis, apart-service condominiais, flat, apart-hotéis, hotéis residência, residence-servi...
 
-5.Documentação necessária: Nota fiscal, solicitação de reserva da Vaetur, extrato com a assinatura do hospede ou a ficha da Embratur (FNRH), boleto bancário ou dados para
-depósito e quando autorizado o faturamento de extras, anexar as comandas assinadas pelo hospede;
+Valor Total das Deduções (R$) Base de Cálculo (R$): Alíquota (%) Valor do 55 (R$): Crédito Nota Salvador (R$):
+0,00 25,88 0,00
 
-6.Não recebemos ou acessamos faturamento via link de internet;
+OUTRAS INFORMAÇÕES
 
-7.Prazo para vencimento de no mínimo 30 dias corridos a contar da data de emissão da nota fiscalifatura.
+Valor INSS (R$): Valor PIS (R$): Valor COFINS (R$) | Valor IR (R$): Valor CSLL (R$): Outras Retenções (R$) Valor Líquido (R$):
+0,00 0,00 0,00 0,00 517,50
 
-8.0s vencimentos dos boletos deverão ser exclusivamente nas datas 05, 15, 25 de cada mês.
+- Esta Nota Salvador foi emitida com respaldo na Lei 7.186/2006.
+- Esta Nota Salvador substitui o RPS Nº 446284 Série 1, emitido em 28/03/2025.
+- Data de vencimento do ISS desta Nota Salvador: 05/04/2025
 
-Orientações Específicas:
+- COMPETÊNCIA: 03/2025 (mêstano)
+- Código de Tributação do Município: 0901-0/01 - Hospedagem em hotel, pousada, pensão, albergue, hospedaria, camping e congêneres
 
-1,A Caixa Econômica Federal atua como substituto tributário conforme orientações abaixo:
-
-a.OPTANTES PELO SIMPLES NACIONAL: Deverá enviar obrigatoriamente a dectaração de Optante pelo Simples Nacional - preenchida, carimbada e assinada pelo
-responsável legal, de acordo com o modelo do link da RFB: http://normas.receita.fazenda.gov.br
-
-b. NÃO OPTANTE PELO SIMPLES NACIONAL: Solicitamos que seja informado o regime tributário na Nota Fiscal. Ressaltamos que, na ausência desta informação, a Voetur
-realizará a retenção de 5,80% (IR 4,80% e CSLL 1%). As referidas retenções serão aplicadas aos pagamentos realizados a partir de 01/01/2025.
-
-- Hotéis tributados pelo Lucro Presumido:
-
-Não haverá alterações. As condições permanecem as mesmas sem retenção, desde que o regime tributário esteja informado na nota fiscal.
-- Hotéis tributados pelo Lucro Real ou Arbitrado:
-
-A partir de 1º de janeiro de 2025, o benefício da alíquota zero será restrito ao PIS e COFINS. Haverá a retenção de 5,80% (IR 4,80% e CSLL 1%).
-INFORMAÇÕES DE CONTATO: Atendimento: Telefone - (61) 3771-3432 - E-mail - postocefbsb(voetur.com.br
-
-DADOS PARA EMISSÃO DA NOTA FISCAL:
-
-Razão Social: VOETUR TURISMO E REPRESENTAÇÕES LTDA.
-CNPJ: 01,017.250/0001-05
-
-Endereço: SCN QUADRA 05 BLOCO A, SALA 417
-
-Bairro: ASA NORTE Cidade/UF: BRASILIA-DF CEP: 70715-900.
-Contato: Departamento de Conciliação
-
-Telefone: (61) 3771-3446 - E-MAIL: conciliacao(yvoetur.com.br
-
-Observação: O prazo de inserir a Nota fiscal será de 48hrs após o checkout,
-Se houver alguma dúvida da parte do hotel referente aa processo de transacionar o cartão, deverá acionar o suporte da Omnibees através do e-mail: servicedeskQbee2pay.com
-10/01/2025 14:01:17;Transações Bee2pay:
-
-mm 10/01/2025 14:01:18;Validação invalida - 10-01-2025
-
-Integração com sucesso - 10-01-2025
-
-Total (BRL)
-214,20 BRL
-
-Astron Hotel Bauru by Nobita
-
-1441/2025

@@ -1,51 +1,39 @@
-Astron Hotel Bauru by Nobile
+(http://normas.receita.fazenda.gov.br/sijut2consulta/anexoOutros.action?idArquivoBinario=41659 )
 
-rt ter rg
+9.2 NAO OPTANTE PELO SIMPLES NACIONAL: Solicitamos que seja informado o regime tributário na Nota Fiscal.
+Ressaltamos que, na ausência desta informação, a Voetur realizará a retenção de 5,80% (IR 4,80% e CSLL 1%). As
+referidas retenções serão aplicadas aos pagamentos realizados a partir de 01/01/2025.
 
-Número de reserva : RES044857-1255 : . Código Grupo:
-[Data dareserva: 10/01/2028 11:01:14 : | Moeda :  BrazilReal
-[Nome Hóspede: REGIANO-- : co , Estado : Confirmada |
-| Canal: | “Canal TMC (0x00) o A pedido”: NÃO |
-Associado : ER = Aprovado por: , Em: Í
-| Código Promocional: : | | |
-L iara ai ir o reinar irritar iii ari ri iii ia narrar er É
+- Hotéis tributados pelo Lucro Presumido:
 
-Hóspede
-imensa mae ra ro ir a
-Nome : REGIANO Apelido: CARLOS DE OLIVEIRA
-Email : Telefone :
-País: Estado :
-Cidade: Morada:
-Código Postal: é crF:
-Quartos
-; Quarto: Standard - 2 Camas de. |. Hóspede: - - REGIANOCARLOS:DE;OLIVEIRA::::.:: Tarifa: ACORDO KONTIK ='DELOITTE - |
-Solteiro ato EE - ir dia po tão des ha : 2024/2025 :
-| Noites: 1 Do Boal o “Ofertas: Sem ofertas :
-. SE : Horade. : '
-| Check Out: 15/01/2025. Adultos: 1 1 x Café da manhã 0,00 BRL
-i Quarto Nº; RES044857-1255/1:. es CLoxWiFi 0,00 BRL |
-j Crianças: O Ea |
-i T. Comissão: Markup(NET). |
-i ' Jdade(s) da(s) Criança(s): .. . : Total Extras: , 0,00. BRL |;
-| v. Comissão: 0,00% E “ . : an |
-| ' - do Taxa: í
-Estado: Confirmada: co : : , : . |
-o Jo ISS 4,20 BRL |
-|
-| Total Taxa: 4,20 BRL |
-| Total: 214,20 BRL
-H
-|
-ti 1
-Preço por dia:
-14 terça-feira
-210,00 BRL
+Não haverá alterações. As condições permanecem as mesmas sem retenção, desde que o regime tributário esteja
+informado na nota fiscal.
 
-Total (BRL)
-214,20 BRL
+- Hotéis tributados pelo Lucro Real ou Arbitrado:
 
-Astron Hotel Baurit by Nobile
+A partir de 1º de janeiro de 2025, o benefício da alíquota zero será restrito ao PIS e COFINS. Haverá a retenção de
+5,80% (IR 4,80% e CSLL 1%).
 
-15101:2025
+10.Prazo para vencimento de no mínimo 20 dias uteis ou 30 dias corridos a contar da data de emissão da nota
+fiscal/fatura.
 
--
+11. Para a forma de pagamento faturada, os vencimentos dos boletos deverão ser exclusivamente nas datas 05, 15, 25
+de cada mês.
+
+12. INFORMACOES DE CONTATO:
+
+Faturamento: Telefone - (61) 2105-1757 E-mail - conciliacao(dvoetur.com.br
+
+13. Não recebemos ou acessamos faturamento via link de internet e/ou arquivos zipados.
+
+A fatura será devolvida no caso de ausência deste documento ou descumprimento de suas instruções.
+Aguardo a confirmação da reserva.
+
+Atenciosamente,
+
+ATENDIMENTO BRASIL
+
+Atendido por:
+Ítalo Ramos de Araújo
+
+2026247:2512923

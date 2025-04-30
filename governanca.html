@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Governança de IA</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    .cursor-pointer {
+      cursor: pointer;
+    }
+    .bg-primary-dark {
+      background-color: rgba(13, 110, 253, 0.85);
+    }
+    .option-card:hover {
+      border-color: #0d6efd;
+      background-color: rgba(13, 110, 253, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid vh-100">
+    <div class="row h-100">
+      <!-- Menu Lateral -->
+      <div class="col-md-3 col-lg-2 d-flex flex-column bg-primary text-white p-3" style="max-width: 250px;">
+        <h4 class="fw-bold mb-4">Portal de Governança de IA</h4>
+        
+        <div class="d-flex align-items-center p-2 rounded mb-2 cursor-pointer bg-primary-dark">
+          <span class="me-2 fs-5">📋</span>
+          <span class="flex-grow-1">Caracterização</span>
+          <i class="bi bi-chevron-up"></i>
+        </div>
+
+        <div class="d-flex align-items-center p-2 rounded mb-2 cursor-pointer">
+          <span class="me-2 fs-5">⚙️</span>
+          <span class="flex-grow-1">Governança</span>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <div class="d-flex align-items-center p-2 rounded mb-2 cursor-pointer">
+          <span class="me-2 fs-5">⚠️</span>
+          <span class="flex-grow-1">Risco</span>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+        
+        <!-- Opções de Relatório -->
+        <div class="mt-4 pt-3 border-top border-primary">
+          <div class="text-light-emphasis small fw-semibold mb-3">RELATÓRIOS</div>
+          
+          <div class="d-flex align-items-center p-2 rounded mb-2 cursor-pointer">
+            <i class="bi bi-file-text"></i>
+            <span class="ms-2">Conformidade</span>
+          </div>
+          
+          <div class="d-flex align-items-center p-2 rounded mb-2 cursor-pointer">
+            <i class="bi bi-exclamation-triangle"></i>
+            <span class="ms-2">Análise de Risco</span>
+          </div>
+          
+          <div class="d-flex align-items-center p-2 rounded mb-2 cursor-pointer">
+            <i class="bi bi-clipboard-check"></i>
+            <span class="ms-2">Plano de Ação</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Área de Conteúdo - Questionário -->
+      <div class="col p-4 overflow-auto">
+        <div class="card shadow">
+          <div class="card-body p-4">
+            <h2 class="card-title text-primary mb-4 fw-bold">Caracterização</h2>
+            
+            <div class="mb-4">
+              <h3 class="mb-4 fs-5 fw-semibold">
+                Quais tipos de dados são utilizados pelo sistema?
+              </h3>
+              
+              <div class="row row-cols-1 row-cols-md-2 g-3">
+                <div class="col">
+                  <div class="p-3 border border-primary rounded d-flex justify-content-between align-items-center option-card bg-light cursor-pointer">
+                    <span>Dados pessoais</span>
+                    <span class="badge bg-primary">
+                      <i class="bi bi-check-lg"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border border-secondary-subtle rounded d-flex justify-content-between align-items-center option-card cursor-pointer">
+                    <span>Dados sensíveis</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border border-primary rounded d-flex justify-content-between align-items-center option-card bg-light cursor-pointer">
+                    <span>Dados corporativos</span>
+                    <span class="badge bg-primary">
+                      <i class="bi bi-check-lg"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border border-secondary-subtle rounded d-flex justify-content-between align-items-center option-card cursor-pointer">
+                    <span>Dados públicos</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Navegação -->
+            <div class="d-flex justify-content-between align-items-center mt-5">
+              <div class="text-secondary small">
+                Pergunta 1 de 3
+              </div>
+              
+              <div class="d-flex gap-2">
+                <button class="btn btn-outline-secondary" disabled>
+                  Anterior
+                </button>
+                
+                <button class="btn btn-primary">
+                  Próxima
+                </button>
+              </div>
+            </div>
+            
+            <!-- Barra de Progresso -->
+            <div class="mt-4">
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 11.1%;" 
+                     aria-valuenow="11.1" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Área de Conteúdo - Relatório (Escondido por padrão) -->
+      <div class="col p-4 overflow-auto d-none">
+        <div class="card shadow">
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h2 class="card-title text-primary fw-bold mb-0">
+                Relatório de Conformidade
+              </h2>
+              
+              <button class="btn btn-outline-primary">
+                Voltar ao Questionário
+              </button>
+            </div>
+            
+            <div class="mb-4">
+              <p class="text-secondary">
+                A análise de conformidade do sistema indica um nível de conformidade parcial (6/10). 
+                São necessárias ações adicionais para aumentar a conformidade com as melhores práticas do setor.
+              </p>
+            </div>
+            
+            <div class="mt-4">
+              <div class="d-flex align-items-center mb-3">
+                <h3 class="fs-5 fw-semibold mb-0 me-3">Avaliação:</h3>
+                <span class="badge bg-warning text-dark">
+                  6/10 - Conformidade parcial
+                </span>
+              </div>
+              
+              <h3 class="fs-5 fw-semibold mb-3">Recomendações:</h3>
+              
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-start ps-0 border-0">
+                  <i class="bi bi-arrow-right"></i>
+                  <span class="ms-2">Considerar a adoção do EU AI Act para sistemas que processam dados pessoais</span>
+                </li>
+                <li class="list-group-item d-flex align-items-start ps-0 border-0">
+                  <i class="bi bi-arrow-right"></i>
+                  <span class="ms-2">Implementar um programa de auditorias periódicas</span>
+                </li>
+                <li class="list-group-item d-flex align-items-start ps-0 border-0">
+                  <i class="bi bi-arrow-right"></i>
+                  <span class="ms-2">Estabelecer um comitê de ética para supervisionar questões de viés</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Área de Conteúdo - Plano de Ação (Escondido por padrão) -->
+      <div class="col p-4 overflow-auto d-none">
+        <div class="card shadow">
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h2 class="card-title text-primary fw-bold mb-0">
+                Plano de Ação
+              </h2>
+              
+              <button class="btn btn-outline-primary">
+                Voltar ao Questionário
+              </button>
+            </div>
+            
+            <div class="mb-4">
+              <p class="text-secondary">
+                Com base nas análises de conformidade e risco, foi desenvolvido um plano de ação com 5 itens.
+                Existem 2 ações de alta prioridade que devem ser implementadas com urgência.
+              </p>
+            </div>
+            
+            <div class="mt-4">
+              <h3 class="fs-5 fw-semibold mb-3">Ações Recomendadas:</h3>
+              
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead class="table-light">
+                    <tr>
+                      <th>#</th>
+                      <th>Ação</th>
+                      <th>Prioridade</th>
+                      <th>Responsável</th>
+                      <th>Prazo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Estabelecer um comitê de ética para supervisionar questões de viés</td>
+                      <td>
+                        <span class="badge bg-danger">Alta</span>
+                      </td>
+                      <td>Comitê de Ética</td>
+                      <td>30 dias</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Implementar testes de viés regulares</td>
+                      <td>
+                        <span class="badge bg-danger">Alta</span>
+                      </td>
+                      <td>Equipe de Governança de IA</td>
+                      <td>30 dias</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Adotar técnicas de anonimização de dados</td>
+                      <td>
+                        <span class="badge bg-warning text-dark">Média</span>
+                      </td>
+                      <td>Equipe de Segurança de Dados</td>
+                      <td>60 dias</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Estabelecer um sistema de monitoramento contínuo</td>
+                      <td>
+                        <span class="badge bg-warning text-dark">Média</span>
+                      </td>
+                      <td>Equipe de Governança de IA</td>
+                      <td>60 dias</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Considerar a adoção do EU AI Act para sistemas que processam dados pessoais</td>
+                      <td>
+                        <span class="badge bg-success">Baixa</span>
+                      </td>
+                      <td>Departamento Jurídico</td>
+                      <td>90 dias</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle com Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

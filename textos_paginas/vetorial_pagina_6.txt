@@ -1,0 +1,144 @@
+VOETUR  TURISMO E REPRESENTACOES LTDA
+R$ 0,00
+18/04/2025
+101
+101
+2
+239687
+DEVILLE HOTEIS E TURISMO LTDA
+R$ 468,59
+31/03/2025
+31/03/2025
+AuTENTIcAÇÃO MECANICA
+Nosso Número
+Valor Original
+Valor do Documento
+Especie
+Carteira
+Quantidade
+Vencimento
+Data do Processamento
+Aceite
+Especie Doc
+Número do documento
+Data do Documento
+Beneficiário
+Local de Pagamento
+REAL
+Nosso Número
+(=)Valor do Documento
+Especie
+Carteira
+Quantidade
+Agência / Código do Benefeciário
+Vencimento
+Data do Processamento
+Aceite
+Especie Doc
+Nosso Numero
+Data de Emissão
+Local de Pagamento
+Comprovante de entrega
+033-7
+REAL
+R$ 468,59
+DEVILLE HOTEIS E TURISMO LTDA
+239687
+2
+N
+N
+18/04/2025
+Pagador
+Beneficiário
+969/7599331
+(-) Outras Deduções
+(+) Mora / Multa
+(-) Desconto / Abatimento
+(+) Outros Acréscimos
+(=) Valor Cobrado
+0000000229997
+Agência / Código do Beneficiário
+969/7599331
+03399.75997 33100.000000
+22999.701018
+6
+10550000046859
+Motivos de não entrega (Para uso da entregadora)
+(  ) Mudou-se
+(  ) Recusado
+(  ) Desconhecido
+(  ) Outros (Anotar no Verso)
+(  ) Falecido
+(  ) Ausente
+Valor
+R$ 468,59
+Recebi(emos) o bloqueto com as
+caracteristicas acima
+Data
+Assinatura
+Data
+Entregador
+033-7
+PAGAR PREFERENCIALMENTE EM AGÊNCIA DO SANTANDER
+Vencimento
+18/04/2025
+Beneficiário
+DEVILLE HOTEIS E TURISMO LTDA
+Agência / Código do Beneficiário
+239687
+Número do documento
+R$ 517,50
+Valor Original
+ Instruções
+(+) Outros Acréscimos
+(=) Valor Cobrado
+(+) Mora / Multa
+(-) Desconto / Abatimento
+(-) Outras Deduções
+033-7
+R$ 517,50
+PAGAR PREFERENCIALMENTE EM AGÊNCIA DO SANTANDER
+RECIBO DO PAGADOR
+0000000229997
+Número do documento
+0000000229997
+FICHA COMPENSAÇÃO
+Asa Norte
+Pagador/Avalista
+Pagador:
+Asa Norte
+VOETUR  TURISMO E REPRESENTACOES LTDA
+70715900
+DF
+CNPJ\CPF:
+01.017.250/0001-05
+St Scn Qdra 5 Bl A Sl 417
+AUTENTICAÇÃO MECANICA
+Pagador:
+Asa Norte
+Asa Norte
+Pagador/Avalista
+VOETUR  TURISMO E REPRESENTACOES LTDA
+01.017.250/0001-05
+St Scn Qdra 5 Bl A Sl 417
+70715900
+DF
+CNPJ\CPF:
+R$ 0,00
+468,59
+468,59
+31/03/2025
+31/03/2025
+Após o vencimento pagavel somente em agências Santander
+BOLETO REFERENTE A FATURA 470320
+MORA DIARIA DE R$ 0,27
+MULTA DE R$ 9,37  APOS O VENCIMENTO
+Apos 5 dias sujeito a protesto.
+Após o vencimento pagavel somente em agências Santander
+BOLETO REFERENTE A FATURA 470320
+MORA DIARIA DE R$ 0,27
+MULTA DE R$ 9,37  APOS O VENCIMENTO
+Apos 5 dias sujeito a protesto.
+969/7599331
+81.071.623/0006-61
+81.071.623/0006-61

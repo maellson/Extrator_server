@@ -1,56 +1,56 @@
-Empresa
+Check-out: 29/03
+Observação: Café da manhã
 
-Ponto de Venda
+FATURAMENTO DE DIÁRIAS
 
-DIARIA
+GARANTIA DE NO SHOW DA PRIMEIRA DIÁRIA
 
-www. desbravador.com
+NÃO COBRAR TAXA DE TURISMO
 
-| ASTRON HOTEL BAURU
+INFORMAR PRAZO PARA CANCELAMENTO
 
-Ficha Razão C/Corrente
-Endereço RUA LUSO BRASILEIRA, 444
-Cidade BAURU-SP
+DADOS PARA FATURAMENTO:
 
-CGCIMF  05.691.015/0004-00
+Razão social: VOETUR TURISMO E REPRESENTAÇÕES LTDA
+CNPJ: 01.017.250/0001-05 Inscrição estadual: 07.308.224/001-42
+Logradouro: SCN Q. 05 Bloco A Sala 417
 
-CEP 17016-230
-Fone 14 21097777 FAX 14
+Bairro: Asa Norte Cidade/UF: Brasília/DF CEP: 70715-900
 
-Inscrição Estadual
+E-mail: conciliacao(Dvoetur.com.br  / conciliacaogrupo(Dvoetur.com.br
 
-VOETUR POSTO CAIXA ECONOMICA
+“ESTA RESERVA/SERVIÇO É DESTINADA À EMPRESA PÚBLICA SUJEITO A RETENÇÃO DA LEI KANDIR.”
 
-CGCIMF 01.017.250/0001-05
-Hóspede REGIANO CARLOS DE OLIVEIRA
-Entrada 14/01/2025 16:01
-180.938.958-50
+ADD RR RR RA RR RR RARA A RA RA AAA AAA AA A ADA AAA AREA
 
-Saída 15/01/2025 08:13
-Funcionário AB.GABRIEL DOS REIS MELLO N.F.000000 / 000000 N.F.2150086 / 150086
+ATENÇÃO: LEIA ATENTAMENTE AS INSTRUÇÕES DE FATURAMENTO ABAIXO!!***
+INSTRUÇÕES PARA FATURAMENTO (EXIGÊNCIAS DA CAIXA ECONOMICA FEDERAL)
 
-Nro.Pax 1
+1. Emitir uma nota fiscal para cada UH (Unidade Habitacional), informando nome do(s) hospede(s), descrição das
+despesas, período de hospedagem (check-in/check-out);
 
-Qtde Produto
+2. Em caso de No Show, especificar na nota fiscal;
 
-FichaNº 051104 Original Apto 0808
+3. Para os apartamentos duplos, deverá estar discriminado na nota fiscal o nome de cada hospede, com seus
+respectivos valores de hospedagem, inclusive o NOSHOW do hospede que dividiria o quarto;
 
-Emissão 15/01/25 08:13
-Turno 02 15/01/25
+4. Nos extratos de hospedagem deverão constar: Nome de Hospede, Descrição das despesas, Período de Hospedagem
+(IN/OUT) e Assinatura do Hospede;
 
-Valor Apto Func
-210,00
+5. Quando autorizado o faturamento de extras, estes deverão vir na mesma NF do hotel, não sendo aceitos NF de
+terceirizados;
 
-DIARIA
+6. Não serão aceitos cobrança de Taxa de Serviço sobre os consumos extras;
+7. Documentação necessária: Nota fiscal, solicitação de reserva da Voetur, extrato com a assinatura do hospede ou a
+ficha da Embratur (FNRH), boleto bancário ou dados para deposito e quando autorizado o faturamento de extras, anexar
 
-Total da Conta (+)
-Descontos Previstos(-) 0,00
-Descontos não Previstos(-) 0,00
-Taxa de Serviço (+) 0,09
-Taxa de ISS (+) 4,20
+as comandas assinadas pelo hospede;
 
-Total Geral R$ 214,20
+8. As notas fiscais faturadas, deverão ser emitidas de acordo com os dados para faturamento e remetidas conforme os
+dados para encaminhamento;
 
-Forma de Pagamento Valor
+9. A Caixa Econômica atua como substituto tributário conforme orientações abaixo:
+9.1 OPTANTES PELO SIMPLES NACIONAL: Deverá enviar obrigatoriamente a declaração de Optante pelo Simples
 
-Prazo
+Nacional - preenchida, carimbada e assinada pelo responsável legal, de acordo com o modelo do link da RFB:
+http://normas.receita.fazenda.gov.br/sijut2consulta/anexoOutros.action?idArquivoBinario=41659
