@@ -9,10 +9,10 @@ from dotenv import load_dotenv
 
 # imports atualizados
 from langchain.prompts import PromptTemplate
-from langchain_community.vectorstores import FAISS
+# from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.chains import RetrievalQA
+# from langchain.chains import RetrievalQA
 
 import fitz  # PyMuPDF
 
@@ -63,13 +63,12 @@ pytesseract.pytesseract.tesseract_cmd = "/opt/homebrew/bin/tesseract"
 pdf_path = "arquivos_pdf/documento.pdf"
 images_dir = "imagens_paginas"
 texts_dir = "textos_paginas"
-highlighted_pages = "highlight_pages"
+highlighted_pages = "highlighted_pages"
 
 os.makedirs(images_dir, exist_ok=True)
 os.makedirs(texts_dir, exist_ok=True)
 # Add this line after the other os.makedirs calls
-os.makedirs(highlighted_pages, exist_ok=True)
-
+# os.makedirs(highlighted_pages, exist_ok=True)
 
 
 def extrair_texto_via_ocr(pdf_path):
@@ -107,32 +106,6 @@ def extrair_texto_completo(pdf_path):
     return sorted(todas.items())
 
 
-def criar_vector_store(paginas_texto):
-    docs = [f"Página {num}:\n{txt}" for num, txt in paginas_texto]
-    splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000, chunk_overlap=100)
-    chunks = splitter.create_documents(docs)
-
-    emb = OpenAIEmbeddings()
-    store = FAISS.from_documents(chunks, emb)
-    store.save_local("faiss_index")
-    print("[FAISS] Índice salvo em ./faiss_index")
-
-
-def consultar_vector_store(pergunta: str):
-    emb = OpenAIEmbeddings()
-    store = FAISS.load_local(
-        "faiss_index", emb, allow_dangerous_deserialization=True
-    )
-    qa = RetrievalQA.from_chain_type(
-        llm=ChatOpenAI(model="gpt-4o-mini", temperature=0),
-        retriever=store.as_retriever(search_kwargs={"k": 3}),
-        return_source_documents=True,
-    )
-    # usa .invoke() em v0.2+
-    return qa.invoke({"query": pergunta})
-
-
 def classificar_documento(paginas_texto):
     conteudo = "\n\n".join(f"Página {n}:\n{t}" for n, t in paginas_texto)
 
@@ -150,10 +123,10 @@ def classificar_documento(paginas_texto):
         - 'descarte' é qualquer página que não se encaixa em nenhum dos outros tipos.
 
         Responda apenas com um JSON, nesse formato:
-        {{  
-        "voucher": [1, 2],  
-        "boleto": [3],  
-        "nota_fiscal": [4, 5]  
+        {{
+        "voucher": [1, 2],
+        "boleto": [3],
+        "nota_fiscal": [4, 5]
         "descarte": [6, 7]
         }}
 
@@ -185,28 +158,9 @@ if __name__ == "__main__":
     print("📄 Extraindo texto...")
     paginas = extrair_texto_completo(pdf_path)
 
-    print("🧠 Criando embeddings e FAISS index...")
-    criar_vector_store(paginas)
-
     print("🔖 Classificando páginas por tipo:")
     classificacao = classificar_documento(paginas)
     print(json.dumps(classificacao, indent=2))
-
-    print("🤖 Fazendo consulta RAG:")
-    query = (
-        "Você está analisando um documento PDF dividido por páginas. "
-        "Cada página começa com 'Página X:'. "
-        "Em qual(is) página(s) aparece uma nota fiscal? em qual página aparece um voucher e em qual página aparece um boleto? "
-        "Responda como: nota_fiscal: [X-Y]"
-
-    )
-    resultado = consultar_vector_store(query)
-
-    print("\n🔎 Resposta RAG:")
-    print(resultado["result"])
-    print("\n📑 Fontes:")
-    for doc in resultado["source_documents"]:
-        print(doc.page_content[:200], "...\n")
 
     # --- dicionário de termos a buscar em cada tipo
     termos_por_tipo = {
@@ -229,7 +183,10 @@ if __name__ == "__main__":
         highlighted_pdf=highlighted_pdf,
         output_prefix="highlighted"
     ) """
+  # Cria o diretório highlight_pages
+    os.makedirs(highlighted_pages, exist_ok=True)
+
     highlighted_pdf = "documento_highlighted.pdf"
     gerar_highlighted_pdf(pdf_path, highlighted_pdf,
                           classificacao, termos_por_tipo)
-    exportar_paginas_com_highlight(highlighted_pdf, "highlighted")
+    exportar_paginas_com_highlight(highlighted_pdf, os.path.join(highlighted_pages, "highlighted"))
