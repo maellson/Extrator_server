@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos de IA - VoeTur</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow: hidden;
+        }
+        
+        .presentation {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            position: relative;
+        }
+        
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            padding: 60px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .slide.active {
+            display: flex;
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            font-size: 2.8em;
+            color: #34495e;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 15px;
+        }
+        
+        h3 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin: 25px 0 15px 0;
+        }
+        
+        .subtitle {
+            font-size: 1.4em;
+            color: #7f8c8d;
+            margin-bottom: 50px;
+        }
+        
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: left;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 6px solid #3498db;
+        }
+        
+        .status-high { border-left-color: #27ae60; }
+        .status-medium { border-left-color: #f39c12; }
+        
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-box {
+            background: #ecf0f1;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: left;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            border-radius: 15px;
+            min-width: 180px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 100;
+        }
+        
+        .nav-btn {
+            background: rgba(52, 73, 94, 0.8);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(52, 73, 94, 1);
+            transform: translateY(-2px);
+        }
+        
+        .slide-indicator {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .logo {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            background: rgba(255,255,255,0.9);
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+        
+        ul {
+            text-align: left;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .comparison-table th {
+            background: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">VoeTur IA</div>
+    <div class="slide-indicator">
+        <span id="current-slide">1</span> / 5
+    </div>
+    
+    <div class="presentation">
+        <!-- Slide 1: Título -->
+        <div class="slide active">
+            <div class="content">
+                <h1>Projetos de Inteligência Artificial</h1>
+                <p class="subtitle">Automatização e Classificação Inteligente</p>
+                
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>🗂️ Classificação de Documentos</h3>
+                        <p>Sistema para classificar páginas de PDFs (vouchers, boletos, notas fiscais)</p>
+                        <div style="margin-top: 15px; color: #e67e22; font-weight: bold;">
+                            📊 Assertividade: 70%
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>🎫 Categorização de Tickets</h3>
+                        <p>Automação para classificar tickets do Freshdesk em categorias de negócio</p>
+                        <div style="margin-top: 15px; color: #27ae60; font-weight: bold;">
+                            ✅ Em Produção 24/7
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>Maelson M. de Lima</strong> - Head de IA<br>
+                    Relatório de Andamento dos Projetos
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2: Classificação de Documentos -->
+        <div class="slide">
+            <div class="content">
+                <h2>🗂️ Classificação de Documentos PDF</h2>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">70%</span>
+                        <div>Assertividade Atual</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4</span>
+                        <div>Tipos de Documento</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">420k</span>
+                        <div>Documentos Potenciais</div>
+                    </div>
+                </div>
+                
+                <div class="features">
+                    <div class="feature-box">
+                        <h3>📋 Tipos Classificados</h3>
+                        <ul>
+                            <li>Vouchers (reservas de hotel)</li>
+                            <li>Boletos bancários</li>
+                            <li>Notas fiscais de serviço</li>
+                            <li>Páginas de descarte</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <h3>⚙️ Tecnologias</h3>
+                        <ul>
+                            <li>Extração de texto (OCR + Vetorial)</li>
+                            <li>GPT-4o-mini para classificação</li>
+                            <li>PyMuPDF + Tesseract</li>
+                            <li>Engenharia de prompt</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>🚧 Desafio Principal:</strong> Falta de labels nos documentos recebidos da VoeTur, impedindo fine-tuning automatizado
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 3: Categorização de Tickets -->
+        <div class="slide">
+            <div class="content">
+                <h2>🎫 Categorização de Tickets Freshdesk</h2>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <div>Operação Contínua</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2min</span>
+                        <div>Intervalo de Execução</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8</span>
+                        <div>Categorias Principais</div>
+                    </div>
+                </div>
+                
+                <div class="features">
+                    <div class="feature-box">
+                        <h3>🏢 Categorias de Negócio</h3>
+                        <ul>
+                            <li>Passagens Aéreas (cotações, emissões, alterações)</li>
+                            <li>Hospedagem (reservas, cancelamentos)</li>
+                            <li>Locação de Veículos</li>
+                            <li>Seguro Viagem</li>
+                            <li>Faturamento e Conciliação</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <h3>🔧 Arquitetura</h3>
+                        <ul>
+                            <li>n8n para automação</li>
+                            <li>API Freshdesk (integração)</li>
+                            <li>OpenAI GPT para análise</li>
+                            <li>Painel de métricas de tokens</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>✅ Status:</strong> Sistema em produção, funcionando automaticamente com fallback para tickets não classificáveis
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 4: Comparação dos Projetos -->
+        <div class="slide">
+            <div class="content">
+                <h2>📊 Comparação dos Projetos</h2>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspecto</th>
+                            <th>Classificação de Documentos</th>
+                            <th>Categorização de Tickets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Status</strong></td>
+                            <td>🔄 Desenvolvimento/Otimização</td>
+                            <td>✅ Produção</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Desempenho</strong></td>
+                            <td>70% de assertividade</td>
+                            <td>Operacional 24/7</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Principal Desafio</strong></td>
+                            <td>Falta de labels para treinamento</td>
+                            <td>Controle de custos de tokens</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tecnologia Principal</strong></td>
+                            <td>GPT-4o-mini + OCR</td>
+                            <td>n8n + OpenAI GPT</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Integração</strong></td>
+                            <td>API VoeTur (planejada)</td>
+                            <td>Freshdesk (ativa)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Volume de Dados</strong></td>
+                            <td>420k+ documentos</td>
+                            <td>Tickets contínuos</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="highlight">
+                    <strong>🎯 Foco Atual:</strong> Melhorar assertividade do classificador de documentos usando abordagem iterativa com validação humana
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 5: Próximos Passos -->
+        <div class="slide">
+            <div class="content">
+                <h2>🚀 Próximos Passos e Recomendações</h2>
+                
+                <div class="features">
+                    <div class="feature-box status-medium">
+                        <h3>📋 Classificação de Documentos</h3>
+                        <ul>
+                            <li>Implementar processo iterativo de validação</li>
+                            <li>Treinar modelos ML (Random Forest/SVM)</li>
+                            <li>Criar interface de validação humana</li>
+                            <li>Meta: aumentar para 85-90% de assertividade</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-box status-high">
+                        <h3>🎫 Categorização de Tickets</h3>
+                        <ul>
+                            <li>Monitorar custos de tokens continuamente</li>
+                            <li>Expandir métricas de hardware</li>
+                            <li>Analisar casos "NÃO CLASSIFICADO"</li>
+                            <li>Otimizar prompts para reduzir custos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">100 amostras</span>
+                        <div>Receber algumas amostras classificadas para fine-tuning</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3-6</span>
+                        <div>Meses para Otimização</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <button class="nav-btn" onclick="previousSlide()">← Anterior</button>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        // Navegação por teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                previousSlide();
+            }
+        });
+        
+        // Auto-play opcional (descomente para ativar)
+        // setInterval(nextSlide, 10000);
+    </script>
+</body>
+</html>
