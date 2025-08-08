@@ -4,6 +4,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
+import base64
+import os
 
 # Configuração da página
 st.set_page_config(
@@ -25,6 +27,42 @@ def conectar_banco():
     except Exception as e:
         st.error(f"Erro ao conectar ao banco de dados: {str(e)}")
         return None
+
+# Função para criar link de download/visualização de PDF
+def create_pdf_link(file_path, file_name):
+    """Cria um link para visualizar o PDF"""
+    if os.path.exists(file_path):
+        # Ler o arquivo PDF
+        with open(file_path, "rb") as f:
+            pdf_data = f.read()
+        
+        # Converter para base64
+        b64_pdf = base64.b64encode(pdf_data).decode()
+        
+        # Criar link de download
+        href = f'<a href="data:application/pdf;base64,{b64_pdf}" download="{file_name}" target="_blank">📄 Visualizar PDF</a>'
+        return href
+    else:
+        return "❌ Arquivo não encontrado"
+
+# Função para exibir PDF inline
+def display_pdf(file_path):
+    """Exibe PDF inline usando iframe"""
+    if os.path.exists(file_path):
+        with open(file_path, "rb") as f:
+            pdf_data = f.read()
+        
+        b64_pdf = base64.b64encode(pdf_data).decode()
+        pdf_display = f"""
+        <iframe src="data:application/pdf;base64,{b64_pdf}" 
+                width="100%" 
+                height="800" 
+                type="application/pdf">
+        </iframe>
+        """
+        st.markdown(pdf_display, unsafe_allow_html=True)
+    else:
+        st.error("Arquivo PDF não encontrado")
 
 # Função para obter estatísticas do banco de dados
 def obter_estatisticas():
@@ -84,7 +122,7 @@ def obter_dados_detalhados():
     
     try:
         df = pd.read_sql_query("""
-            SELECT nome_arquivo, caminho_arquivo, tipo_classificacao, indice_certeza,
+            SELECT id, nome_arquivo, caminho_arquivo, tipo_classificacao, indice_certeza,
                    tokens_entrada, tokens_saida, data_processamento
             FROM classificacoes
             ORDER BY data_processamento DESC
@@ -133,6 +171,10 @@ def obter_distribuicao_certeza():
             conn.close()
         st.error(f"Erro ao obter distribuição de certeza: {str(e)}")
         return pd.DataFrame()
+
+# Inicializar session state para controlar qual PDF está sendo visualizado
+if 'pdf_selecionado' not in st.session_state:
+    st.session_state.pdf_selecionado = None
 
 # Obter estatísticas
 estatisticas = obter_estatisticas()
@@ -237,14 +279,64 @@ if estatisticas is not None:
             (df_detalhado['indice_certeza'] <= faixa_certeza[1])
         ]
         
-        # Adicionar coluna com link para visualizar o PDF
-        df_filtrado_display = df_filtrado.copy()
-        df_filtrado_display['Visualizar PDF'] = df_filtrado_display.apply(
-            lambda row: f"[Abrir PDF]({row['caminho_arquivo']})", axis=1
-        )
+        # Mostrar dados filtrados com interface melhorada
+        st.subheader("Dados Filtrados")
+        if not df_filtrado.empty:
+            
+            # Criar interface tabular interativa
+            for idx, row in df_filtrado.iterrows():
+                with st.container():
+                    col1, col2, col3, col4, col5, col6 = st.columns([3, 2, 1, 1, 1, 1])
+                    
+                    with col1:
+                        st.write(f"**{row['nome_arquivo']}**")
+                    
+                    with col2:
+                        # Badge colorido para o tipo
+                        tipo_colors = {
+                            'voucher': '#1f77b4',
+                            'boleto': '#ff7f0e', 
+                            'nota_fiscal': '#2ca02c',
+                            'descarte': '#d62728'
+                        }
+                        color = tipo_colors.get(row['tipo_classificacao'], '#7f7f7f')
+                        st.markdown(f'<span style="background-color: {color}; color: white; padding: 3px 8px; border-radius: 12px; font-size: 12px;">{row["tipo_classificacao"]}</span>', unsafe_allow_html=True)
+                    
+                    with col3:
+                        st.write(f"**{row['indice_certeza']:.2f}**")
+                    
+                    with col4:
+                        st.write(f"{row['tokens_entrada']}")
+                    
+                    with col5:
+                        st.write(f"{row['tokens_saida']}")
+                    
+                    with col6:
+                        # Botão para visualizar PDF
+                        if st.button("👁️ Ver", key=f"view_{row['id']}", help="Visualizar PDF"):
+                            st.session_state.pdf_selecionado = row['caminho_arquivo']
+                    
+                    st.divider()
+            
+            # Seção de visualização de PDF
+            if st.session_state.pdf_selecionado:
+                st.markdown("---")
+                st.subheader("📄 Visualizador de PDF")
+                
+                col1, col2 = st.columns([1, 4])
+                with col1:
+                    if st.button("❌ Fechar Visualizador"):
+                        st.session_state.pdf_selecionado = None
+                        st.rerun()
+                
+                with col2:
+                    st.write(f"**Arquivo:** {os.path.basename(st.session_state.pdf_selecionado)}")
+                
+                # Exibir PDF
+                display_pdf(st.session_state.pdf_selecionado)
         
-        # Mostrar dados filtrados
-        st.dataframe(df_filtrado_display.drop(columns=['caminho_arquivo']), use_container_width=True)
+        else:
+            st.info("Nenhum dado disponível para exibir")
         
         # Estatísticas dos dados filtrados
         st.subheader("Estatísticas dos Dados Filtrados")
