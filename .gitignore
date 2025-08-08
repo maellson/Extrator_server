@@ -180,3 +180,12 @@ cython_debug/
 amostragem
 amostragem/**
 amostragem/*
+
+highlighted_pages
+highlighted_pages/**
+
+imagens_paginas/**
+imagens_paginas/*
+
+textos_paginas/**
+textos_paginas/*

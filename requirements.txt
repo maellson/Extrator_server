@@ -6,3 +6,6 @@ openai
 faiss-cpu
 python-dotenv
 langchain_openai
+streamlit>=1.48.0
+plotly
+pandas
